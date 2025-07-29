@@ -1,0 +1,7 @@
+discord.py
+python-docx
+PyMuPDF
+fastapi
+uvicorn[standard]
+python-multipart
+python-docx
