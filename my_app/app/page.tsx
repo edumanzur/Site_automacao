@@ -114,7 +114,7 @@ export default function PDFConverter() {
       setFileState((prev) => ({ ...prev, uploading: false, processing: true, progress: 40 }))
 
       // Fazer requisição real para o backend
-      const response = await fetch("http://localhost:8000/upload-pdf", {
+      const response = await fetch("https://site-automacao.onrender.com", {
         method: "POST",
         body: formData,
       })
