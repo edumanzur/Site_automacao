@@ -30,7 +30,7 @@ app = FastAPI()
 # CORS
 origins = [
     "http://localhost:3000",  # para dev local
-    "https://site-automacao-dt8s8m6s3-edumanzur21-6375s-projects.vercel.app"
+    "site-automacao-r9rl630wi-edumanzur21-6375s-projects.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
