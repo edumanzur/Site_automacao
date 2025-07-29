@@ -114,7 +114,7 @@ export default function PDFConverter() {
       setFileState((prev) => ({ ...prev, uploading: false, processing: true, progress: 40 }))
 
       // Fazer requisição real para o backend
-      const response = await fetch("https://site-automacao.onrender.com", {
+      const response = await fetch("https://site-automacao.onrender.com/upload-pdf", {
         method: "POST",
         body: formData,
       })
@@ -344,7 +344,7 @@ export default function PDFConverter() {
         {/* Debug Info */}
         <div className="mt-4 p-4 bg-gray-100 rounded-lg text-xs text-gray-600">
           <p><strong>Backend Status:</strong> {fileState.uploading || fileState.processing ? "Processing..." : "Ready"}</p>
-          <p><strong>Server URL:</strong> http://localhost:8000/upload-pdf</p>
+          <p><strong>Server URL:</strong> https://site-automacao.onrender.com</p>
           {fileState.downloadUrl && <p><strong>Download URL:</strong> Generated ✅</p>}
         </div>
       </div>
