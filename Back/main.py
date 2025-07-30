@@ -8,15 +8,9 @@ import io
 from docx import Document  
 from pathlib import Path
 
-# No início do main.py, após os imports
-import sys
-print(f"Python version: {sys.version}")
-print(f"Current directory: {os.getcwd()}")
-print(f"Files in directory: {os.listdir('.')}")
-
 # Importar suas funções
 try:
-    from extracao import extrair_campos
+    from Back.extracao import extrair_campos
     print("✅ Módulo extracao importado com sucesso")
     print("⚠️ ATENÇÃO: extrair_campos é uma função ASYNC")
 except ImportError as e:
@@ -25,7 +19,7 @@ except ImportError as e:
         return {"erro": "Módulo extracao não encontrado"}
 
 try:
-    from preencher import preencher_modelo
+    from Back.preencher import preencher_modelo
     print("✅ Módulo preencher importado com sucesso")
     print("📋 preencher_modelo precisa de: (caminho_modelo, caminho_saida, dados)")
 except ImportError as e:
