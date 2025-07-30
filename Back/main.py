@@ -175,12 +175,16 @@ async def upload_pdf(file: UploadFile = File(...)):
             # Sua função precisa de: preencher_modelo(caminho_modelo, caminho_saida, dados)
             
             # Verificar se existe um template
-            template_path = "modelo.docx"  # Nome padrão
+            template_path = "Back/modelo.docx"  # ✅ Caminho correto
             possible_templates = [
-                "template.docx",
-                "modelo.docx", 
+                "Back/template.docx",        # ✅ Adicionar Back/
+                "Back/modelo.docx",          # ✅ Adicionar Back/
+                "template.docx",             # Manter para compatibilidade
+                "modelo.docx",               # Manter para compatibilidade
                 "template/template.docx",
-                "templates/template.docx"
+                "templates/template.docx",
+                "Back/template/template.docx",  # ✅ Caso esteja em subpasta
+                "Back/templates/template.docx"  # ✅ Caso esteja em subpasta
             ]
             
             template_encontrado = None
