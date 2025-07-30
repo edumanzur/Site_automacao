@@ -6,6 +6,11 @@ import tempfile
 import shutil
 from pathlib import Path
 
+import os
+print("Diretório atual:", os.getcwd())
+print("Arquivos na pasta:", os.listdir())
+
+
 # Importar suas funções
 try:
     from extracao import extrair_campos
