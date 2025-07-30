@@ -6,14 +6,6 @@ import tempfile
 import shutil
 from pathlib import Path
 
-@app.get("/debug-templates")
-async def debug_templates():
-    arquivos = []
-    for caminho in ["template.docx", "modelo.docx", "template/template.docx", "templates/template.docx"]:
-        arquivos.append({caminho: os.path.exists(caminho)})
-    return {"templates_encontrados": arquivos}
-
-
 # Importar suas funções
 try:
     from extracao import extrair_campos
