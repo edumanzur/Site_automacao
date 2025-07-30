@@ -6,11 +6,6 @@ import tempfile
 import shutil
 from pathlib import Path
 
-import os
-print("Diretório atual:", os.getcwd())
-print("Arquivos na pasta:", os.listdir())
-
-
 # Importar suas funções
 try:
     from extracao import extrair_campos
@@ -178,7 +173,7 @@ async def upload_pdf(file: UploadFile = File(...)):
             # Sua função precisa de: preencher_modelo(caminho_modelo, caminho_saida, dados)
             
             # Verificar se existe um template
-            template_path = "template.docx"  # Nome padrão
+            template_path = "modelo.docx"  # Nome padrão
             possible_templates = [
                 "template.docx",
                 "modelo.docx", 
