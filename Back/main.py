@@ -8,6 +8,12 @@ import io
 from docx import Document  
 from pathlib import Path
 
+# No início do main.py, após os imports
+import sys
+print(f"Python version: {sys.version}")
+print(f"Current directory: {os.getcwd()}")
+print(f"Files in directory: {os.listdir('.')}")
+
 # Importar suas funções
 try:
     from extracao import extrair_campos
