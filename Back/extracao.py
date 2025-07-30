@@ -286,7 +286,7 @@ MAPA_CONFIG_EXTRACAO_REVISAO12 = {
             # Pattern para encontrar um nome após '---' (CRM) e espaços.
             # O lookahead negativo é para o grupo capturado do nome.
             # Captura o nome do médico (grupo 1 do regex).
-            'value_pattern': r"(?:---|\b\d{3,}\b)\s+((?i)(?!NEOPLASIA|DIAGNÓSTICO|DIAGNOSTICO|CID:|SUSPEITA|INVESTIGAÇÃO|PACIENTE COM|\s*-\s*$|PREZADOS|PREZADO)(?:(?:Dr|Dra)\.?\s*)?[A-ZÀ-Ú][a-zA-ZÀ-Ú'\.\s-]{2,}(?:\s+[A-ZÀ-Ú][a-zA-ZÀ-Ú'\.\s-]+){1,4})",
+            'value_pattern': r"(?:---|\b\d{3,}\b)\s+((re.IGNORECASE)(?!NEOPLASIA|DIAGNÓSTICO|DIAGNOSTICO|CID:|SUSPEITA|INVESTIGAÇÃO|PACIENTE COM|\s*-\s*$|PREZADOS|PREZADO)(?:(?:Dr|Dra)\.?\s*)?[A-ZÀ-Ú][a-zA-ZÀ-Ú'\.\s-]{2,}(?:\s+[A-ZÀ-Ú][a-zA-ZÀ-Ú'\.\s-]+){1,4})",
             'processador_valor_regex': limpar_valor_simples
         }
     ],
