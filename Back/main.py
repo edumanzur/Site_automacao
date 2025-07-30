@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 import tempfile
 import shutil
+import io  
+from docx import Document  
 from pathlib import Path
 
 # Importar suas funções
