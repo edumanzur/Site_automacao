@@ -31,7 +31,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",  # para dev local
     "https://site-automacao-r80e36cht-edumanzur21-6375s-projects.vercel.app",
-    "htpps://site-automacao-eight.vercel.app"
+    "https://site-automacao-eight.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
